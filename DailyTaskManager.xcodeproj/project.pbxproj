@@ -14,6 +14,7 @@
 		F465213029A8B55900A87362 /* DailyTaskManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465212F29A8B55900A87362 /* DailyTaskManagerTests.swift */; };
 		F465213A29A8B55900A87362 /* DailyTaskManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465213929A8B55900A87362 /* DailyTaskManagerUITests.swift */; };
 		F465213C29A8B55900A87362 /* DailyTaskManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465213B29A8B55900A87362 /* DailyTaskManagerUITestsLaunchTests.swift */; };
+		F465214A29A8B63900A87362 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465214929A8B63900A87362 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		F465213529A8B55900A87362 /* DailyTaskManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyTaskManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F465213929A8B55900A87362 /* DailyTaskManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskManagerUITests.swift; sourceTree = "<group>"; };
 		F465213B29A8B55900A87362 /* DailyTaskManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F465214929A8B63900A87362 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		F465211D29A8B55600A87362 /* DailyTaskManager */ = {
 			isa = PBXGroup;
 			children = (
+				F465214829A8B62B00A87362 /* Home */,
 				F465211E29A8B55600A87362 /* DailyTaskManagerApp.swift */,
 				F465212029A8B55600A87362 /* ContentView.swift */,
 				F465212229A8B55800A87362 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				F465213B29A8B55900A87362 /* DailyTaskManagerUITestsLaunchTests.swift */,
 			);
 			path = DailyTaskManagerUITests;
+			sourceTree = "<group>";
+		};
+		F465214829A8B62B00A87362 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F465214929A8B63900A87362 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F465214A29A8B63900A87362 /* HomeView.swift in Sources */,
 				F465212129A8B55600A87362 /* ContentView.swift in Sources */,
 				F465211F29A8B55600A87362 /* DailyTaskManagerApp.swift in Sources */,
 			);
@@ -345,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -420,11 +432,14 @@
 				DEVELOPMENT_TEAM = N2987QJ72C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Task Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,6 +447,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.ibirori.rw.DailyTaskManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,11 +467,14 @@
 				DEVELOPMENT_TEAM = N2987QJ72C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Task Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,6 +482,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.ibirori.rw.DailyTaskManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
